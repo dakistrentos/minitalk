@@ -4,13 +4,13 @@ static char	*g_str_pointer = NULL;
 
 void	usage_print(void)
 {
-	write(1, "usage: ./client [valid server's pid] [text message]\n", 52);
+	ft_putstr_fd("usage: ./client [valid server's pid] [text message]\n", 1);
 	exit(0);
 }
 
 void	invalid_server(void)
 {
-	write(1, "Invalid Server's pid!\n", 22);
+	ft_putstr_fd("Invalid Server's pid!\n", 1);
 	exit(0);
 }
 

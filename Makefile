@@ -28,3 +28,14 @@ fclean : clean
 	rm -rf $(SERVER_APP) $(CLIENT_APP)
 
 re : fclean all
+
+re_client : 
+	$(CC) $(FLAGS) client.c libft/libft.a -o client
+
+re_server :
+	$(CC) $(FLAGS) server.c libft/libft.a -o server
+
+re_client_server :
+	$(CC) $(FLAGS) client.c libft/libft.a -o client
+	$(CC) $(FLAGS) server.c libft/libft.a -o server
+
