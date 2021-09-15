@@ -1,6 +1,6 @@
 #include "minitalk.h"
 
-char	print_bin_str_main(int bin, int pid)
+char	print_bin_str(int bin, int pid)
 {
 	static int	counter;
 	static char	c;
@@ -36,7 +36,7 @@ static void	main_handler(int bin, siginfo_t *info, void *context)
 	usleep(100);
 	if (status != '1')
 	{	
-		status = print_bin_str_main(bin, info->si_pid);
+		status = print_bin_str(bin, info->si_pid);
 	}
 	else
 	{

@@ -14,7 +14,7 @@ void	invalid_server(void)
 	exit(0);
 }
 
-void	send_bin_str(int pid, char *str_pointer, int memory_slot)
+void	send_bin(int pid, char *str_pointer, int memory_slot)
 {	
 	int	bin;
 
@@ -38,7 +38,7 @@ static void	main_handler(int bin, siginfo_t *info, void *context)
 	{
 		if (memory_slot < 7)
 		{
-			send_bin_str(info->si_pid, g_str_pointer, memory_slot);
+			send_bin(info->si_pid, g_str_pointer, memory_slot);
 			memory_slot++;
 			if (memory_slot == 7)
 			{
