@@ -34,7 +34,7 @@ static void	main_handler(int bin, siginfo_t *info, void *context)
 	usleep(100);
 	(void)context;
 	len = ft_strlen(&g_str_pointer[0]);
-	if (g_str_pointer && bin == 31 && len != 0)
+	if (g_str_pointer && bin == SIGUSR2 && len != 0)
 	{
 		if (memory_slot < 7)
 		{
